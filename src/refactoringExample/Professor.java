@@ -5,10 +5,26 @@
  */
 package refactoringExample;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author 1795680
  */
-public class Professor {
+public class Professor extends Person{
+    List <Student> students = new ArrayList<Student>();
+    String photoUrl;
+    public Professor(String lastName, String firstName){
+        String employeeID = lastName.toUpperCase().trim().substring(1, 3);
+        System.out.println("New Professor: "+employeeID);
+        
+    }
+    
+    public void setPhotoUrl(String photoname){
+        this.photoUrl="/photos/professors/mad/"+photoname;
+        
+    }
+            
     
 }
